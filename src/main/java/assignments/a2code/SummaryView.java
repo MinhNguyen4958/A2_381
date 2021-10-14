@@ -1,4 +1,4 @@
-package assignments.a2_381;
+package assignments.a2code;
 
 
 import javafx.geometry.Insets;
