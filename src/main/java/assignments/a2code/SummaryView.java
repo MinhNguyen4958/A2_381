@@ -13,7 +13,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 
 
-public class SummaryView extends Pane implements TTrackSub {
+public class SummaryView extends Pane implements TTrackSubscriber {
     private VBox left_vbox;
     private VBox right_vbox;
     private HBox pay_total_box;

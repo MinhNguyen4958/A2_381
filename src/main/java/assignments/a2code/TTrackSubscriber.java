@@ -1,5 +1,5 @@
 package assignments.a2code;
 
-public interface TTrackSub {
+public interface TTrackSubscriber {
     void modelUpdated();
 }

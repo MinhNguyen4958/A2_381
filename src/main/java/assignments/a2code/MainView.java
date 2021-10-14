@@ -8,7 +8,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 
-public class MainView extends Pane implements TTrackSub {
+public class MainView extends Pane implements TTrackSubscriber {
     private Label main_menu;
     private Button add_project;
     private Button view_projects;

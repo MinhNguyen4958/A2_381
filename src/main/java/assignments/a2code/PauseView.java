@@ -8,7 +8,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 
-public class PauseView extends Pane implements TTrackSub {
+public class PauseView extends Pane implements TTrackSubscriber {
     private VBox root;
 //    private HBox title_box;
 //    private HBox hrs_box;

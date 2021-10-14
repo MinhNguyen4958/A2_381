@@ -10,7 +10,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 
-public class NewProjectView extends Pane implements TTrackSub {
+public class NewProjectView extends Pane implements TTrackSubscriber {
     private VBox root;
 
     private HBox second_root;
