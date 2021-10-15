@@ -58,7 +58,7 @@ public class NewProjectView extends Pane implements TTrackSubscriber {
         custom_time_txt.setVisible(false);
         custom_time_txt.addEventHandler(MouseEvent.MOUSE_CLICKED, e -> custom_time_txt.clear());
         timerGroup = new ToggleGroup();
-        currentTimeBtn = new RadioButton("Current time\nOctober 13th @ 10:48pm");
+        currentTimeBtn = new RadioButton("Current time");
         customTimeBtn = new RadioButton("Custom date and time");
         currentTimeBtn.setToggleGroup(timerGroup);
         currentTimeBtn.addEventHandler(MouseEvent.MOUSE_CLICKED, e -> {
