@@ -119,6 +119,6 @@ public class SummaryView extends Pane implements TTrackSubscriber {
 
     public void setModel(Project newProject) { }
 
-    public void setController (TTrackController newController) {}
+    public void setController (NPController newController) {}
 
 }

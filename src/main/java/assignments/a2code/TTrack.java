@@ -6,12 +6,10 @@ import javafx.scene.Scene;
 
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 public class TTrack extends Application {
     @Override
     public void start(Stage stage)  {
-        TTrackController controller = new TTrackController();
+        NPController controller = new NPController();
         Project project = new Project();
 
         NewProjectView view1 = new NewProjectView();

@@ -91,7 +91,7 @@ public class NewProjectView extends Pane implements TTrackSubscriber {
     }
 
     public void setModel(Project newProject) { project = newProject; }
-    public void setController (TTrackController newController) {}
+    public void setController (NPController newController) {}
 
     @Override
     public void modelUpdated() {

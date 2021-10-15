@@ -58,7 +58,7 @@ public class MainView extends Pane implements TTrackSubscriber {
 
     }
 
-    public void setController (TTrackController newController) {}
+    public void setController (NPController newController) {}
 
     public void setModel(Project newProject) { }
 }

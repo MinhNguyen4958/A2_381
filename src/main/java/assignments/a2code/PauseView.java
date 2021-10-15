@@ -10,9 +10,7 @@ import javafx.scene.text.Font;
 
 public class PauseView extends Pane implements TTrackSubscriber {
     private VBox root;
-//    private HBox title_box;
-//    private HBox hrs_box;
-//    private HBox status_box;
+
     private HBox buttons;
     private Label title_name;
     private Label total_hrs;
@@ -70,7 +68,7 @@ public class PauseView extends Pane implements TTrackSubscriber {
 
     public Button getFinishButton() { return finish_btn; }
 
-    public void setController (TTrackController newController) {}
+    public void setController (NPController newController) {}
 
     public void setModel(Project newProject) {}
 
