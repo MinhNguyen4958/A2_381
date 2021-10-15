@@ -33,7 +33,7 @@ public class PauseView extends Pane implements TTrackSubscriber {
         paused_dur = new Label("Paused Duration: 00h 00m");
         paused_dur.setFont(Font.font(20));
 
-        pause_resume_btn = new Button("Pause");
+//        pause_resume_btn = new Button("Pause");
         pause_resume_btn.setOnAction(e -> {
             if (pause_resume_btn.getText().equals("Pause")) {
                 pause_resume_btn.setText("Resume");
