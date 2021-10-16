@@ -14,6 +14,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class NewProjectView extends Pane implements TTrackSubscriber {
@@ -46,9 +47,10 @@ public class NewProjectView extends Pane implements TTrackSubscriber {
     //controller
     NewProjectController controller;
 
-    public Button getAddProject() {
-        return AddProject;
+    public Button getBack_btn() {
+        return back_btn;
     }
+
 
     public NewProjectView() {
 
@@ -87,6 +89,7 @@ public class NewProjectView extends Pane implements TTrackSubscriber {
         customTimeBtn = new RadioButton("Custom date");
         currentTimeBtn.setToggleGroup(timerGroup);
         AddProject = new Button("Add Project");
+        back_btn = new Button("Back");
         calendar = new DatePicker();
         // initially set the calendar's visibility to false
         calendar.setVisible(false);
@@ -104,9 +107,12 @@ public class NewProjectView extends Pane implements TTrackSubscriber {
             // add the tile typed in the box to the project
             controller.handleTitle(title_box.getText());
             controller.handleDescription(desc_box.getText());
+
             //If the current time button is selected then add the current time to the tracker
             if (currentTimeBtn.isSelected()) {
                 controller.handleTime(LocalTime.now());
+                controller.handleStartDate(LocalDate.now());
+
             } else {
                 controller.handleTime(LocalTime.now());
                 controller.handleStartDate(calendar.getValue());
@@ -132,8 +138,8 @@ public class NewProjectView extends Pane implements TTrackSubscriber {
         Date_Time.setPadding(new Insets(0, 0, 0, 30));
         Date_Time.getChildren().addAll(pick_time, currentTimeBtn, customTimeBtn, calendar);
         second_root.getChildren().addAll(NP_Title, Date_Time);
-
-        root.getChildren().addAll(second_root, AddProject);
+        buttons.getChildren().addAll(back_btn, AddProject);
+        root.getChildren().addAll(second_root, buttons);
 
         this.getChildren().add(root);
     }

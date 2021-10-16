@@ -42,7 +42,8 @@ public class TTrack extends Application {
         stage.setTitle("TTrack");
         stage.setScene(main_scene);
         mainView.getAdd_project().setOnAction(e -> stage.setScene(NP_scene));
-        projectView.getAddProject().setOnAction(e -> stage.setScene(main_scene));
+        projectView.getBack_btn().setOnAction(e -> stage.setScene(main_scene));
+
 //        mainView.getView_projects().setOnAction(e -> stage.setScene(PL_scene));
 
         mainView.getExit().setOnAction(e -> stage.close());
