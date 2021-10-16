@@ -68,7 +68,7 @@ public class PauseView extends Pane implements TTrackSubscriber {
 
     public Button getFinishButton() { return finish_btn; }
 
-    public void setController (NPController newController) {}
+    public void setController (NewProjectController newController) {}
 
     public void setModel(Project newProject) {}
 

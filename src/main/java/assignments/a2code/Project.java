@@ -3,33 +3,30 @@ package assignments.a2code;
 import javafx.util.Duration;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.ArrayList;
+
 
 public class Project {
-    private ArrayList<TTrackSubscriber> subs;
     private String title_name;
+    private String description;
     private LocalTime tracker_timer;
     private LocalDate start_date;
     private LocalDate end_date;
 
-    public void addSubscriber(TTrackSubscriber newSub) { subs.add(newSub); }
+    public void setTitle_name(String title_name) {
+        this.title_name = title_name;
+    }
 
-    private void notifySubs() { subs.forEach(TTrackSubscriber::modelUpdated); }
+    public void setDescription(String description) { this.description = description; }
 
-    public void addTitle(String title) {
-        title_name = title;
-        notifySubs();
+    public void setTracker_timer(LocalTime tracker_timer) {
+        this.tracker_timer = tracker_timer;
     }
-    public void addTime(LocalTime timer) {
-        tracker_timer = timer;
-        notifySubs();
+
+    public void setStart_date(LocalDate start_date) {
+        this.start_date = start_date;
     }
-    public void addStartDate(LocalDate date) {
-        start_date = date;
-        notifySubs();
-    }
-    public void addEndDate(LocalDate date) {
-        end_date = date;
-        notifySubs();
+
+    public void setEnd_date(LocalDate end_date) {
+        this.end_date = end_date;
     }
 }

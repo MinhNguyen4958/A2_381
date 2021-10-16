@@ -6,13 +6,20 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class NewProjectController {
-    Project model;
+    private ProjectModel model;
     public NewProjectController() {}
 
-    public void setModel(Project newModel) { model = newModel; }
+    public void setModel(ProjectModel newModel) { model = newModel; }
 
-    public void handleTitle(ActionEvent event, String title) { model.addTitle(title); }
-    public void handleTime(ActionEvent event, LocalTime timer) { model.addTime(timer); }
-    public void handleStartDate(ActionEvent event, LocalDate date) { model.addStartDate(date); }
+    public void addProject() { model.addProject(); }
+
+    public void handleDescription(String desc) {model.addDescription(desc); }
+
+    public void handleTitle(String title) { model.addTitle(title); }
+
+    public void handleTime(LocalTime timer) { model.addTracker(timer); }
+
+    public void handleStartDate(LocalDate date) { model.addStartDate(date); }
+
     public void handleEndDate(ActionEvent event, LocalDate date) { model.addEndDate(date); }
 }
